@@ -10,7 +10,6 @@
 		F258871D29600E3F00BC4A43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258871C29600E3F00BC4A43 /* AppDelegate.swift */; };
 		F258871F29600E3F00BC4A43 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258871E29600E3F00BC4A43 /* SceneDelegate.swift */; };
 		F258872129600E3F00BC4A43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258872029600E3F00BC4A43 /* ViewController.swift */; };
-		F258872429600E3F00BC4A43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F258872229600E3F00BC4A43 /* Main.storyboard */; };
 		F258872729600E3F00BC4A43 /* eMasaryTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F258872529600E3F00BC4A43 /* eMasaryTask.xcdatamodeld */; };
 		F258872929600E4000BC4A43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F258872829600E4000BC4A43 /* Assets.xcassets */; };
 		F258872C29600E4000BC4A43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F258872A29600E4000BC4A43 /* LaunchScreen.storyboard */; };
@@ -41,7 +40,6 @@
 		F258871C29600E3F00BC4A43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F258871E29600E3F00BC4A43 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F258872029600E3F00BC4A43 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F258872329600E3F00BC4A43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F258872629600E3F00BC4A43 /* eMasaryTask.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = eMasaryTask.xcdatamodel; sourceTree = "<group>"; };
 		F258872829600E4000BC4A43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F258872B29600E4000BC4A43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,10 +99,10 @@
 		F258871B29600E3F00BC4A43 /* eMasaryTask */ = {
 			isa = PBXGroup;
 			children = (
+				F25887502960100E00BC4A43 /* UserStories */,
 				F258871C29600E3F00BC4A43 /* AppDelegate.swift */,
 				F258871E29600E3F00BC4A43 /* SceneDelegate.swift */,
 				F258872029600E3F00BC4A43 /* ViewController.swift */,
-				F258872229600E3F00BC4A43 /* Main.storyboard */,
 				F258872829600E4000BC4A43 /* Assets.xcassets */,
 				F258872A29600E4000BC4A43 /* LaunchScreen.storyboard */,
 				F258872D29600E4000BC4A43 /* Info.plist */,
@@ -128,6 +126,21 @@
 				F258874229600E4000BC4A43 /* eMasaryTaskUITestsLaunchTests.swift */,
 			);
 			path = eMasaryTaskUITests;
+			sourceTree = "<group>";
+		};
+		F258874F2960100200BC4A43 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		F25887502960100E00BC4A43 /* UserStories */ = {
+			isa = PBXGroup;
+			children = (
+				F258874F2960100200BC4A43 /* Authentication */,
+			);
+			path = UserStories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +249,6 @@
 			files = (
 				F258872C29600E4000BC4A43 /* LaunchScreen.storyboard in Resources */,
 				F258872929600E4000BC4A43 /* Assets.xcassets in Resources */,
-				F258872429600E3F00BC4A43 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,14 +313,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F258872229600E3F00BC4A43 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F258872329600E3F00BC4A43 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F258872A29600E4000BC4A43 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -446,7 +450,6 @@
 				INFOPLIST_FILE = eMasaryTask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -454,7 +457,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.elshazly.ForeignNumbersWatch.eMasaryTask;
+				PRODUCT_BUNDLE_IDENTIFIER = me.elshazly.eMasaryTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -474,7 +477,6 @@
 				INFOPLIST_FILE = eMasaryTask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -482,7 +484,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.elshazly.ForeignNumbersWatch.eMasaryTask;
+				PRODUCT_BUNDLE_IDENTIFIER = me.elshazly.eMasaryTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
