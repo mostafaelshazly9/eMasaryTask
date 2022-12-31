@@ -16,6 +16,10 @@
 		F258873729600E4000BC4A43 /* eMasaryTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258873629600E4000BC4A43 /* eMasaryTaskTests.swift */; };
 		F258874129600E4000BC4A43 /* eMasaryTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258874029600E4000BC4A43 /* eMasaryTaskUITests.swift */; };
 		F258874329600E4000BC4A43 /* eMasaryTaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258874229600E4000BC4A43 /* eMasaryTaskUITestsLaunchTests.swift */; };
+		F2588753296014D100BC4A43 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2588752296014D100BC4A43 /* GoogleService-Info.plist */; };
+		F25887562960183700BC4A43 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F25887552960183700BC4A43 /* FirebaseFirestore */; };
+		F25887582960183700BC4A43 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = F25887572960183700BC4A43 /* FirebaseFunctions */; };
+		F258875C2960188F00BC4A43 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258875B2960188F00BC4A43 /* FirebaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,8 @@
 		F258873C29600E4000BC4A43 /* eMasaryTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eMasaryTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F258874029600E4000BC4A43 /* eMasaryTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eMasaryTaskUITests.swift; sourceTree = "<group>"; };
 		F258874229600E4000BC4A43 /* eMasaryTaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eMasaryTaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F2588752296014D100BC4A43 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F258875B2960188F00BC4A43 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F25887562960183700BC4A43 /* FirebaseFirestore in Frameworks */,
+				F25887582960183700BC4A43 /* FirebaseFunctions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,14 +107,14 @@
 		F258871B29600E3F00BC4A43 /* eMasaryTask */ = {
 			isa = PBXGroup;
 			children = (
-				F25887502960100E00BC4A43 /* UserStories */,
 				F258871C29600E3F00BC4A43 /* AppDelegate.swift */,
 				F258871E29600E3F00BC4A43 /* SceneDelegate.swift */,
 				F258872029600E3F00BC4A43 /* ViewController.swift */,
-				F258872829600E4000BC4A43 /* Assets.xcassets */,
-				F258872A29600E4000BC4A43 /* LaunchScreen.storyboard */,
-				F258872D29600E4000BC4A43 /* Info.plist */,
 				F258872529600E3F00BC4A43 /* eMasaryTask.xcdatamodeld */,
+				F258872A29600E4000BC4A43 /* LaunchScreen.storyboard */,
+				F25887512960138900BC4A43 /* Resources */,
+				F25887592960184C00BC4A43 /* Services */,
+				F25887502960100E00BC4A43 /* UserStories */,
 			);
 			path = eMasaryTask;
 			sourceTree = "<group>";
@@ -143,6 +151,32 @@
 			path = UserStories;
 			sourceTree = "<group>";
 		};
+		F25887512960138900BC4A43 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F2588752296014D100BC4A43 /* GoogleService-Info.plist */,
+				F258872D29600E4000BC4A43 /* Info.plist */,
+				F258872829600E4000BC4A43 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F25887592960184C00BC4A43 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F258875A2960187F00BC4A43 /* Firebase */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F258875A2960187F00BC4A43 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				F258875B2960188F00BC4A43 /* FirebaseManager.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,6 +193,10 @@
 			dependencies = (
 			);
 			name = eMasaryTask;
+			packageProductDependencies = (
+				F25887552960183700BC4A43 /* FirebaseFirestore */,
+				F25887572960183700BC4A43 /* FirebaseFunctions */,
+			);
 			productName = eMasaryTask;
 			productReference = F258871929600E3F00BC4A43 /* eMasaryTask.app */;
 			productType = "com.apple.product-type.application";
@@ -231,6 +269,9 @@
 				Base,
 			);
 			mainGroup = F258871029600E3F00BC4A43;
+			packageReferences = (
+				F25887542960183700BC4A43 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = F258871A29600E3F00BC4A43 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -249,6 +290,7 @@
 			files = (
 				F258872C29600E4000BC4A43 /* LaunchScreen.storyboard in Resources */,
 				F258872929600E4000BC4A43 /* Assets.xcassets in Resources */,
+				F2588753296014D100BC4A43 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F258875C2960188F00BC4A43 /* FirebaseManager.swift in Sources */,
 				F258872129600E3F00BC4A43 /* ViewController.swift in Sources */,
 				F258872729600E3F00BC4A43 /* eMasaryTask.xcdatamodeld in Sources */,
 				F258871D29600E3F00BC4A43 /* AppDelegate.swift in Sources */,
@@ -447,7 +490,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 92248YS3F6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = eMasaryTask/Info.plist;
+				INFOPLIST_FILE = eMasaryTask/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -474,7 +517,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 92248YS3F6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = eMasaryTask/Info.plist;
+				INFOPLIST_FILE = eMasaryTask/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -503,7 +546,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.elshazly.ForeignNumbersWatch.eMasaryTaskTests;
+				PRODUCT_BUNDLE_IDENTIFIER = me.elshazly.eMasaryTaskTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -523,7 +566,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.elshazly.ForeignNumbersWatch.eMasaryTaskTests;
+				PRODUCT_BUNDLE_IDENTIFIER = me.elshazly.eMasaryTaskTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -541,7 +584,7 @@
 				DEVELOPMENT_TEAM = 92248YS3F6;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.elshazly.ForeignNumbersWatch.eMasaryTaskUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = me.elshazly.eMasaryTaskUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -559,7 +602,7 @@
 				DEVELOPMENT_TEAM = 92248YS3F6;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.elshazly.ForeignNumbersWatch.eMasaryTaskUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = me.elshazly.eMasaryTaskUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -608,6 +651,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F25887542960183700BC4A43 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = exactVersion;
+				version = 9.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F25887552960183700BC4A43 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F25887542960183700BC4A43 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		F25887572960183700BC4A43 /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F25887542960183700BC4A43 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		F258872529600E3F00BC4A43 /* eMasaryTask.xcdatamodeld */ = {
