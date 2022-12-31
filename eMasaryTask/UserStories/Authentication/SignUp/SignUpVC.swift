@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class SignUpVC: UIViewController {
+class SignUpVC: BaseVC {
 
     private let contentView = SignUpView()
 
@@ -17,6 +17,7 @@ class SignUpVC: UIViewController {
     }
 
     override func viewDidLoad() {
+        super.viewDidLoad()
         contentView.delegate = self
     }
 }

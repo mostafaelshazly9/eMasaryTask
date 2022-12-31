@@ -7,8 +7,11 @@
 
 import Foundation
 import FirebaseCore
+import FirebaseFirestore
 
 class FirebaseManager {
+
+    static let db = Firestore.firestore()
 
     static func configureFirebase() {
         FirebaseApp.configure()
