@@ -18,6 +18,8 @@ class AuthenticationView: BaseView {
 
     let usernameTextField = AuthenticationTextField()
     let passwordTextField = AuthenticationTextField()
+    let usernameErrorLabel = AuthenticationErrorLabel()
+    let passwordErrorLabel = AuthenticationErrorLabel()
     let mainButton = UIButton()
     let switchButton = UIButton()
 
@@ -25,6 +27,8 @@ class AuthenticationView: BaseView {
 
     private let usernameTextFieldPlaceHolder = "Username"
     private let passwordTextFieldPlaceHolder = "Password"
+    private let usernameErrorLabelText = "Username cannot be empty"
+    private let passwordErrorLabelText = "Password cannot be empty"
 
     override func setupView() {
         super.setupView()
@@ -32,6 +36,24 @@ class AuthenticationView: BaseView {
         setupPasswordTextField()
         setupMainButton()
         setupSwitchButton()
+        setupUsernameErrorLabel()
+        setupPasswordErrorLabel()
+    }
+
+    func showUsernameEmptyError() {
+        usernameErrorLabel.isHidden = false
+    }
+
+    func showPasswordEmptyError() {
+        passwordErrorLabel.isHidden = false
+    }
+
+    func hideUsernameEmptyError() {
+        usernameErrorLabel.isHidden = true
+    }
+
+    func hidePasswordEmptyError() {
+        passwordErrorLabel.isHidden = true
     }
 
     private func setupUsernameTextField() {
@@ -78,6 +100,24 @@ class AuthenticationView: BaseView {
         switchButton.translatesAutoresizingMaskIntoConstraints = false
         switchButton.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         switchButton.topAnchor.constraint(equalTo: mainButton.bottomAnchor, constant: 20).isActive = true
+    }
+
+    private func setupUsernameErrorLabel() {
+        usernameErrorLabel.text = usernameErrorLabelText
+
+        addSubview(usernameErrorLabel)
+        usernameErrorLabel.translatesAutoresizingMaskIntoConstraints = false
+        usernameErrorLabel.leadingAnchor.constraint(equalTo: usernameTextField.leadingAnchor).isActive = true
+        usernameErrorLabel.bottomAnchor.constraint(equalTo: usernameTextField.topAnchor, constant: -8).isActive = true
+    }
+
+    private func setupPasswordErrorLabel() {
+        passwordErrorLabel.text = passwordErrorLabelText
+
+        addSubview(passwordErrorLabel)
+        passwordErrorLabel.translatesAutoresizingMaskIntoConstraints = false
+        passwordErrorLabel.leadingAnchor.constraint(equalTo: passwordTextField.leadingAnchor).isActive = true
+        passwordErrorLabel.bottomAnchor.constraint(equalTo: passwordTextField.topAnchor, constant: -8).isActive = true
     }
 
     @objc private func didTapMainButton() {

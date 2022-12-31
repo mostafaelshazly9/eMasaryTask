@@ -30,6 +30,8 @@
 		F2588779296031C900BC4A43 /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2588778296031C900BC4A43 /* SignUpModel.swift */; };
 		F258877B296031D400BC4A43 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258877A296031D400BC4A43 /* SignUpView.swift */; };
 		F258877D296031DC00BC4A43 /* SignUpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258877C296031DC00BC4A43 /* SignUpVM.swift */; };
+		F258877F29603F5800BC4A43 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258877E29603F5800BC4A43 /* BaseVC.swift */; };
+		F25887812960459000BC4A43 /* AuthenticationErrorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887802960459000BC4A43 /* AuthenticationErrorLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		F2588778296031C900BC4A43 /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
 		F258877A296031D400BC4A43 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		F258877C296031DC00BC4A43 /* SignUpVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVM.swift; sourceTree = "<group>"; };
+		F258877E29603F5800BC4A43 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		F25887802960459000BC4A43 /* AuthenticationErrorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationErrorLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				F25887662960255B00BC4A43 /* BaseView.swift */,
+				F258877E29603F5800BC4A43 /* BaseVC.swift */,
 			);
 			path = BaseClasses;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 		F25887682960306E00BC4A43 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F25887802960459000BC4A43 /* AuthenticationErrorLabel.swift */,
 				F25887692960308200BC4A43 /* AuthenticationTextField.swift */,
 			);
 			path = Views;
@@ -391,11 +397,13 @@
 				F2588774296031A600BC4A43 /* SignInModel.swift in Sources */,
 				F25887622960244700BC4A43 /* AuthenticationView.swift in Sources */,
 				F258876E2960318E00BC4A43 /* SignInVC.swift in Sources */,
+				F25887812960459000BC4A43 /* AuthenticationErrorLabel.swift in Sources */,
 				F258876A2960308200BC4A43 /* AuthenticationTextField.swift in Sources */,
 				F258877D296031DC00BC4A43 /* SignUpVM.swift in Sources */,
 				F25887702960319500BC4A43 /* SignInVM.swift in Sources */,
 				F25887672960255B00BC4A43 /* BaseView.swift in Sources */,
 				F258877B296031D400BC4A43 /* SignUpView.swift in Sources */,
+				F258877F29603F5800BC4A43 /* BaseVC.swift in Sources */,
 				F258871D29600E3F00BC4A43 /* AppDelegate.swift in Sources */,
 				F258871F29600E3F00BC4A43 /* SceneDelegate.swift in Sources */,
 				F2588777296031C200BC4A43 /* SignUpVC.swift in Sources */,
