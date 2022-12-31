@@ -1,5 +1,5 @@
 //
-//  AuthenticationVC.swift
+//  SignInVC.swift
 //  eMasaryTask
 //
 //  Created by Mostafa Elshazly on 31/12/2022.
@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-class AuthenticationVC: UIViewController {
+class SignInVC: UIViewController {
 
-    let contentView = AuthenticationView()
+    let contentView = SignInView()
 
     override func loadView() {
         view = contentView

@@ -10,15 +10,10 @@ import UIKit
 
 class AuthenticationView: BaseView {
 
-    private let usernameTextField = AuthenticationTextField()
-    private let passwordTextField = AuthenticationTextField()
-    private let mainButton = UIButton()
-    private let switchButton = UIButton()
-
-    private let usernameTextFieldPlaceHolder = "Username"
-    private let passwordTextFieldPlaceHolder = "Password"
-    private let mainButtonText = "  Sign in  "
-    private let switchButtonText = "New user? Sign up"
+    let usernameTextField = AuthenticationTextField()
+    let passwordTextField = AuthenticationTextField()
+    let mainButton = UIButton()
+    let switchButton = UIButton()
 
     override func setupView() {
         super.setupView()
@@ -29,8 +24,6 @@ class AuthenticationView: BaseView {
     }
 
     private func setupUsernameTextField() {
-        usernameTextField.placeholder = usernameTextFieldPlaceHolder
-
         addSubview(usernameTextField)
         usernameTextField.translatesAutoresizingMaskIntoConstraints = false
         usernameTextField.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
@@ -40,7 +33,6 @@ class AuthenticationView: BaseView {
     }
 
     private func setupPasswordTextField() {
-        passwordTextField.placeholder = passwordTextFieldPlaceHolder
         passwordTextField.isSecureTextEntry = true
 
         addSubview(passwordTextField)
@@ -52,7 +44,6 @@ class AuthenticationView: BaseView {
     }
 
     private func setupMainButton() {
-        mainButton.setTitle(mainButtonText, for: .normal)
         mainButton.backgroundColor = .tintColor
         mainButton.layer.cornerRadius = 8
 
@@ -63,7 +54,6 @@ class AuthenticationView: BaseView {
     }
 
     private func setupSwitchButton() {
-        switchButton.setTitle(switchButtonText, for: .normal)
         switchButton.setTitleColor(.tintColor, for: .normal)
 
         addSubview(switchButton)
