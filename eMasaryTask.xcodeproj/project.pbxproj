@@ -9,14 +9,30 @@
 /* Begin PBXBuildFile section */
 		F258871D29600E3F00BC4A43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258871C29600E3F00BC4A43 /* AppDelegate.swift */; };
 		F258871F29600E3F00BC4A43 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258871E29600E3F00BC4A43 /* SceneDelegate.swift */; };
-		F258872129600E3F00BC4A43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258872029600E3F00BC4A43 /* ViewController.swift */; };
-		F258872429600E3F00BC4A43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F258872229600E3F00BC4A43 /* Main.storyboard */; };
 		F258872729600E3F00BC4A43 /* eMasaryTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F258872529600E3F00BC4A43 /* eMasaryTask.xcdatamodeld */; };
 		F258872929600E4000BC4A43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F258872829600E4000BC4A43 /* Assets.xcassets */; };
 		F258872C29600E4000BC4A43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F258872A29600E4000BC4A43 /* LaunchScreen.storyboard */; };
-		F258873729600E4000BC4A43 /* eMasaryTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258873629600E4000BC4A43 /* eMasaryTaskTests.swift */; };
 		F258874129600E4000BC4A43 /* eMasaryTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258874029600E4000BC4A43 /* eMasaryTaskUITests.swift */; };
 		F258874329600E4000BC4A43 /* eMasaryTaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258874229600E4000BC4A43 /* eMasaryTaskUITestsLaunchTests.swift */; };
+		F2588753296014D100BC4A43 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2588752296014D100BC4A43 /* GoogleService-Info.plist */; };
+		F25887562960183700BC4A43 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F25887552960183700BC4A43 /* FirebaseFirestore */; };
+		F25887582960183700BC4A43 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = F25887572960183700BC4A43 /* FirebaseFunctions */; };
+		F258875C2960188F00BC4A43 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258875B2960188F00BC4A43 /* FirebaseManager.swift */; };
+		F25887622960244700BC4A43 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887612960244700BC4A43 /* AuthenticationView.swift */; };
+		F25887672960255B00BC4A43 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887662960255B00BC4A43 /* BaseView.swift */; };
+		F258876A2960308200BC4A43 /* AuthenticationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887692960308200BC4A43 /* AuthenticationTextField.swift */; };
+		F258876E2960318E00BC4A43 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258876D2960318E00BC4A43 /* SignInVC.swift */; };
+		F25887702960319500BC4A43 /* SignInVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258876F2960319500BC4A43 /* SignInVM.swift */; };
+		F25887722960319F00BC4A43 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887712960319F00BC4A43 /* SignInView.swift */; };
+		F2588774296031A600BC4A43 /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2588773296031A600BC4A43 /* SignInModel.swift */; };
+		F2588777296031C200BC4A43 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2588776296031C200BC4A43 /* SignUpVC.swift */; };
+		F2588779296031C900BC4A43 /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2588778296031C900BC4A43 /* SignUpModel.swift */; };
+		F258877B296031D400BC4A43 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258877A296031D400BC4A43 /* SignUpView.swift */; };
+		F258877D296031DC00BC4A43 /* SignUpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258877C296031DC00BC4A43 /* SignUpVM.swift */; };
+		F258877F29603F5800BC4A43 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258877E29603F5800BC4A43 /* BaseVC.swift */; };
+		F25887812960459000BC4A43 /* AuthenticationErrorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887802960459000BC4A43 /* AuthenticationErrorLabel.swift */; };
+		F258878629604E0E00BC4A43 /* AuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258878529604E0E00BC4A43 /* AuthenticationTests.swift */; };
+		F25887BF2960547E00BC4A43 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F25887BE2960547E00BC4A43 /* FirebaseFirestoreSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,17 +56,30 @@
 		F258871929600E3F00BC4A43 /* eMasaryTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eMasaryTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F258871C29600E3F00BC4A43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F258871E29600E3F00BC4A43 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F258872029600E3F00BC4A43 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F258872329600E3F00BC4A43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F258872629600E3F00BC4A43 /* eMasaryTask.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = eMasaryTask.xcdatamodel; sourceTree = "<group>"; };
 		F258872829600E4000BC4A43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F258872B29600E4000BC4A43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F258872D29600E4000BC4A43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F258873229600E4000BC4A43 /* eMasaryTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eMasaryTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F258873629600E4000BC4A43 /* eMasaryTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eMasaryTaskTests.swift; sourceTree = "<group>"; };
 		F258873C29600E4000BC4A43 /* eMasaryTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eMasaryTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F258874029600E4000BC4A43 /* eMasaryTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eMasaryTaskUITests.swift; sourceTree = "<group>"; };
 		F258874229600E4000BC4A43 /* eMasaryTaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eMasaryTaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F2588752296014D100BC4A43 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F258875B2960188F00BC4A43 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		F25887612960244700BC4A43 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		F25887662960255B00BC4A43 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		F25887692960308200BC4A43 /* AuthenticationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTextField.swift; sourceTree = "<group>"; };
+		F258876D2960318E00BC4A43 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		F258876F2960319500BC4A43 /* SignInVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVM.swift; sourceTree = "<group>"; };
+		F25887712960319F00BC4A43 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		F2588773296031A600BC4A43 /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
+		F2588776296031C200BC4A43 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		F2588778296031C900BC4A43 /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
+		F258877A296031D400BC4A43 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		F258877C296031DC00BC4A43 /* SignUpVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVM.swift; sourceTree = "<group>"; };
+		F258877E29603F5800BC4A43 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		F25887802960459000BC4A43 /* AuthenticationErrorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationErrorLabel.swift; sourceTree = "<group>"; };
+		F258878529604E0E00BC4A43 /* AuthenticationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F25887562960183700BC4A43 /* FirebaseFirestore in Frameworks */,
+				F25887582960183700BC4A43 /* FirebaseFunctions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F25887BF2960547E00BC4A43 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +117,7 @@
 				F258873529600E4000BC4A43 /* eMasaryTaskTests */,
 				F258873F29600E4000BC4A43 /* eMasaryTaskUITests */,
 				F258871A29600E3F00BC4A43 /* Products */,
+				F258878729604F0100BC4A43 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,12 +136,12 @@
 			children = (
 				F258871C29600E3F00BC4A43 /* AppDelegate.swift */,
 				F258871E29600E3F00BC4A43 /* SceneDelegate.swift */,
-				F258872029600E3F00BC4A43 /* ViewController.swift */,
-				F258872229600E3F00BC4A43 /* Main.storyboard */,
-				F258872829600E4000BC4A43 /* Assets.xcassets */,
-				F258872A29600E4000BC4A43 /* LaunchScreen.storyboard */,
-				F258872D29600E4000BC4A43 /* Info.plist */,
 				F258872529600E3F00BC4A43 /* eMasaryTask.xcdatamodeld */,
+				F258872A29600E4000BC4A43 /* LaunchScreen.storyboard */,
+				F25887512960138900BC4A43 /* Resources */,
+				F25887592960184C00BC4A43 /* Services */,
+				F25887502960100E00BC4A43 /* UserStories */,
+				F25887682960306E00BC4A43 /* Views */,
 			);
 			path = eMasaryTask;
 			sourceTree = "<group>";
@@ -116,7 +149,7 @@
 		F258873529600E4000BC4A43 /* eMasaryTaskTests */ = {
 			isa = PBXGroup;
 			children = (
-				F258873629600E4000BC4A43 /* eMasaryTaskTests.swift */,
+				F258878529604E0E00BC4A43 /* AuthenticationTests.swift */,
 			);
 			path = eMasaryTaskTests;
 			sourceTree = "<group>";
@@ -128,6 +161,106 @@
 				F258874229600E4000BC4A43 /* eMasaryTaskUITestsLaunchTests.swift */,
 			);
 			path = eMasaryTaskUITests;
+			sourceTree = "<group>";
+		};
+		F258874F2960100200BC4A43 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				F258876B2960315A00BC4A43 /* Base */,
+				F258876C2960316C00BC4A43 /* SignIn */,
+				F2588775296031B300BC4A43 /* SignUp */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		F25887502960100E00BC4A43 /* UserStories */ = {
+			isa = PBXGroup;
+			children = (
+				F25887652960255000BC4A43 /* BaseClasses */,
+				F258874F2960100200BC4A43 /* Authentication */,
+			);
+			path = UserStories;
+			sourceTree = "<group>";
+		};
+		F25887512960138900BC4A43 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F2588752296014D100BC4A43 /* GoogleService-Info.plist */,
+				F258872D29600E4000BC4A43 /* Info.plist */,
+				F258872829600E4000BC4A43 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F25887592960184C00BC4A43 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F258875A2960187F00BC4A43 /* Firebase */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F258875A2960187F00BC4A43 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				F258875B2960188F00BC4A43 /* FirebaseManager.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		F25887652960255000BC4A43 /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				F25887662960255B00BC4A43 /* BaseView.swift */,
+				F258877E29603F5800BC4A43 /* BaseVC.swift */,
+			);
+			path = BaseClasses;
+			sourceTree = "<group>";
+		};
+		F25887682960306E00BC4A43 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F25887802960459000BC4A43 /* AuthenticationErrorLabel.swift */,
+				F25887692960308200BC4A43 /* AuthenticationTextField.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F258876B2960315A00BC4A43 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F25887612960244700BC4A43 /* AuthenticationView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F258876C2960316C00BC4A43 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				F2588773296031A600BC4A43 /* SignInModel.swift */,
+				F258876D2960318E00BC4A43 /* SignInVC.swift */,
+				F25887712960319F00BC4A43 /* SignInView.swift */,
+				F258876F2960319500BC4A43 /* SignInVM.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		F2588775296031B300BC4A43 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				F2588778296031C900BC4A43 /* SignUpModel.swift */,
+				F2588776296031C200BC4A43 /* SignUpVC.swift */,
+				F258877A296031D400BC4A43 /* SignUpView.swift */,
+				F258877C296031DC00BC4A43 /* SignUpVM.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		F258878729604F0100BC4A43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +279,10 @@
 			dependencies = (
 			);
 			name = eMasaryTask;
+			packageProductDependencies = (
+				F25887552960183700BC4A43 /* FirebaseFirestore */,
+				F25887572960183700BC4A43 /* FirebaseFunctions */,
+			);
 			productName = eMasaryTask;
 			productReference = F258871929600E3F00BC4A43 /* eMasaryTask.app */;
 			productType = "com.apple.product-type.application";
@@ -164,6 +301,9 @@
 				F258873429600E4000BC4A43 /* PBXTargetDependency */,
 			);
 			name = eMasaryTaskTests;
+			packageProductDependencies = (
+				F25887BE2960547E00BC4A43 /* FirebaseFirestoreSwift */,
+			);
 			productName = eMasaryTaskTests;
 			productReference = F258873229600E4000BC4A43 /* eMasaryTaskTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -201,6 +341,7 @@
 					};
 					F258873129600E4000BC4A43 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 						TestTargetID = F258871829600E3F00BC4A43;
 					};
 					F258873B29600E4000BC4A43 = {
@@ -218,6 +359,9 @@
 				Base,
 			);
 			mainGroup = F258871029600E3F00BC4A43;
+			packageReferences = (
+				F25887542960183700BC4A43 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = F258871A29600E3F00BC4A43 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -236,7 +380,7 @@
 			files = (
 				F258872C29600E4000BC4A43 /* LaunchScreen.storyboard in Resources */,
 				F258872929600E4000BC4A43 /* Assets.xcassets in Resources */,
-				F258872429600E3F00BC4A43 /* Main.storyboard in Resources */,
+				F2588753296014D100BC4A43 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,10 +405,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F258872129600E3F00BC4A43 /* ViewController.swift in Sources */,
+				F258875C2960188F00BC4A43 /* FirebaseManager.swift in Sources */,
 				F258872729600E3F00BC4A43 /* eMasaryTask.xcdatamodeld in Sources */,
+				F2588779296031C900BC4A43 /* SignUpModel.swift in Sources */,
+				F2588774296031A600BC4A43 /* SignInModel.swift in Sources */,
+				F25887622960244700BC4A43 /* AuthenticationView.swift in Sources */,
+				F258876E2960318E00BC4A43 /* SignInVC.swift in Sources */,
+				F25887812960459000BC4A43 /* AuthenticationErrorLabel.swift in Sources */,
+				F258876A2960308200BC4A43 /* AuthenticationTextField.swift in Sources */,
+				F258877D296031DC00BC4A43 /* SignUpVM.swift in Sources */,
+				F25887702960319500BC4A43 /* SignInVM.swift in Sources */,
+				F25887672960255B00BC4A43 /* BaseView.swift in Sources */,
+				F258877B296031D400BC4A43 /* SignUpView.swift in Sources */,
+				F258877F29603F5800BC4A43 /* BaseVC.swift in Sources */,
 				F258871D29600E3F00BC4A43 /* AppDelegate.swift in Sources */,
 				F258871F29600E3F00BC4A43 /* SceneDelegate.swift in Sources */,
+				F2588777296031C200BC4A43 /* SignUpVC.swift in Sources */,
+				F25887722960319F00BC4A43 /* SignInView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +429,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F258873729600E4000BC4A43 /* eMasaryTaskTests.swift in Sources */,
+				F258878629604E0E00BC4A43 /* AuthenticationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,14 +458,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F258872229600E3F00BC4A43 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F258872329600E3F00BC4A43 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F258872A29600E4000BC4A43 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -443,10 +592,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 92248YS3F6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = eMasaryTask/Info.plist;
+				INFOPLIST_FILE = eMasaryTask/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -454,7 +602,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.elshazly.ForeignNumbersWatch.eMasaryTask;
+				PRODUCT_BUNDLE_IDENTIFIER = me.elshazly.eMasaryTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -471,10 +619,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 92248YS3F6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = eMasaryTask/Info.plist;
+				INFOPLIST_FILE = eMasaryTask/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -482,7 +629,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.elshazly.ForeignNumbersWatch.eMasaryTask;
+				PRODUCT_BUNDLE_IDENTIFIER = me.elshazly.eMasaryTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -495,15 +642,23 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 92248YS3F6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.elshazly.ForeignNumbersWatch.eMasaryTaskTests;
+				PRODUCT_BUNDLE_IDENTIFIER = me.elshazly.eMasaryTaskTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eMasaryTask.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/eMasaryTask";
@@ -515,15 +670,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 92248YS3F6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.elshazly.ForeignNumbersWatch.eMasaryTaskTests;
+				PRODUCT_BUNDLE_IDENTIFIER = me.elshazly.eMasaryTaskTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eMasaryTask.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/eMasaryTask";
@@ -539,7 +701,7 @@
 				DEVELOPMENT_TEAM = 92248YS3F6;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.elshazly.ForeignNumbersWatch.eMasaryTaskUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = me.elshazly.eMasaryTaskUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -557,7 +719,7 @@
 				DEVELOPMENT_TEAM = 92248YS3F6;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.elshazly.ForeignNumbersWatch.eMasaryTaskUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = me.elshazly.eMasaryTaskUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -606,6 +768,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F25887542960183700BC4A43 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = exactVersion;
+				version = 9.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F25887552960183700BC4A43 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F25887542960183700BC4A43 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		F25887572960183700BC4A43 /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F25887542960183700BC4A43 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
+		};
+		F25887BE2960547E00BC4A43 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F25887542960183700BC4A43 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		F258872529600E3F00BC4A43 /* eMasaryTask.xcdatamodeld */ = {
