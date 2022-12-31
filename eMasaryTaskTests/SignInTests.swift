@@ -14,5 +14,22 @@ final class SignInTests: XCTestCase {
     func testErrorIsShownWithEmptyUsername() {
         // given
         let sut = SignInVM()
+
+        // when
+        sut.trySigningInWith(username: "", password: "123")
+
+        // then
+        XCTAssertTrue(sut.isShowingUsernameEmptyError)
+    }
+
+    func testErrorIsShownWithEmptyPassword() {
+        // given
+        let sut = SignInVM()
+
+        // when
+        sut.trySigningInWith(username: "123", password: "")
+
+        // then
+        XCTAssertTrue(sut.isShowingPasswordEmptyError)
     }
 }
