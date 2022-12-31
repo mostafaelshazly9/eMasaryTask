@@ -9,5 +9,10 @@ import Foundation
 import UIKit
 
 class AuthenticationVC: UIViewController {
-    
+
+    let contentView = AuthenticationView()
+
+    override func loadView() {
+        view = contentView
+    }
 }

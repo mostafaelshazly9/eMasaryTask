@@ -21,6 +21,6 @@ class BaseView: UIView {
 
     /// Meant to be overridden
     func setupView() {
-
+        backgroundColor = .white
     }
 }
