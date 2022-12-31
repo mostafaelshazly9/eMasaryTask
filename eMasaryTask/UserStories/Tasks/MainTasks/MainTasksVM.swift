@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
 class MainTasksVM: ObservableObject, TasksVM {
 
@@ -13,11 +14,21 @@ class MainTasksVM: ObservableObject, TasksVM {
     var tasksPublished: Published<[TodoTask]> { _tasks }
     var tasksPublisher: Published<[TodoTask]>.Publisher { $tasks }
 
-    func getTasks() {
-        // TODO: Add real code
-        tasks = [TodoTask(todoTaskId: "123", title: "test", description: "desc", priority: "low", userId: "124124", dueDate: nil, archived: false, completed: false, lastModification: nil),
-                 TodoTask(todoTaskId: "123", title: "test", description: "desc", priority: "normal", userId: "124124", dueDate: nil, archived: false, completed: false, lastModification: nil),
-                 TodoTask(todoTaskId: "123", title: "test", description: "desc", priority: "high", userId: "124124", dueDate: nil, archived: false, completed: false, lastModification: nil),
-                 TodoTask(todoTaskId: "123", title: "test", description: "desc", priority: "critical", userId: "124124", dueDate: nil, archived: false, completed: false, lastModification: nil)]
+    func getTasks() async throws {
+        guard let userId = UserDefaults.standard.value(forKey: "userId") as? String else { return }
+        let ref = FirebaseManager.db.collection("todos")
+            .whereField("userId", isEqualTo: userId)
+            .whereField("archived", isEqualTo: false)
+            .whereField("completed", isEqualTo: false)
+
+        do {
+            let snapshot = try await ref.getDocuments()
+            tasks = snapshot.documents.compactMap { document in
+                return try? JSONDecoder().decode(TodoTask.self, fromJSONObject: document.prepareForDecoding())
+            }
+        } catch let error {
+            // TODO: Handle error, probably by retrieving the local list
+            print(error)
+        }
     }
 }

@@ -9,7 +9,7 @@ import Foundation
 
 struct TodoTask: Decodable {
 
-    let todoTaskId: String
+    let documentId: String
     let title: String?
     let description: String?
     let priority: String?

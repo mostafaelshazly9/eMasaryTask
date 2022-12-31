@@ -13,7 +13,9 @@ class BaseTasksVC: BaseVC {
     var contentView: TasksView!
 
     override func setupBindings() {
-        viewModel.getTasks()
+        Task {
+            try await viewModel.getTasks()
+        }
 
         viewModel.tasksPublisher
             .receive(on: DispatchQueue.main)

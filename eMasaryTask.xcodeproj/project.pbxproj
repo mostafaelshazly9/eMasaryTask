@@ -42,6 +42,7 @@
 		F25887D3296072AD00BC4A43 /* TasksVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887D2296072AD00BC4A43 /* TasksVM.swift */; };
 		F25887D62960733C00BC4A43 /* TodoTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887D52960733C00BC4A43 /* TodoTask.swift */; };
 		F25887D929607F6900BC4A43 /* MainTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887D829607F6900BC4A43 /* MainTaskTableViewCell.swift */; };
+		F25887DC2960AB6200BC4A43 /* QueryDocumentSnapshot+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887DB2960AB6200BC4A43 /* QueryDocumentSnapshot+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		F25887D2296072AD00BC4A43 /* TasksVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksVM.swift; sourceTree = "<group>"; };
 		F25887D52960733C00BC4A43 /* TodoTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTask.swift; sourceTree = "<group>"; };
 		F25887D829607F6900BC4A43 /* MainTaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTaskTableViewCell.swift; sourceTree = "<group>"; };
+		F25887DB2960AB6200BC4A43 /* QueryDocumentSnapshot+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QueryDocumentSnapshot+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 		F258871B29600E3F00BC4A43 /* eMasaryTask */ = {
 			isa = PBXGroup;
 			children = (
+				F25887DA2960AB5600BC4A43 /* Extensions */,
 				F25887D42960732A00BC4A43 /* Library */,
 				F258871C29600E3F00BC4A43 /* AppDelegate.swift */,
 				F258871E29600E3F00BC4A43 /* SceneDelegate.swift */,
@@ -330,6 +333,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		F25887DA2960AB5600BC4A43 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F25887DB2960AB6200BC4A43 /* QueryDocumentSnapshot+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -497,6 +508,7 @@
 				F25887D62960733C00BC4A43 /* TodoTask.swift in Sources */,
 				F25887CC296071EA00BC4A43 /* MainTasksVC.swift in Sources */,
 				F25887722960319F00BC4A43 /* SignInView.swift in Sources */,
+				F25887DC2960AB6200BC4A43 /* QueryDocumentSnapshot+Extensions.swift in Sources */,
 				F25887CA296071DA00BC4A43 /* MainTasksModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
