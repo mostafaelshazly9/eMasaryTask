@@ -77,7 +77,7 @@ class SignUpVC: BaseVC {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] shouldShow in
                 if shouldShow {
-                    let viewController = SignUpVC() // TODO: Add Main screen here
+                    let viewController = MainTasksVC()
                     viewController.modalPresentationStyle = .fullScreen
                     self?.navigationController?.present(viewController, animated: true)
                     self?.viewModel.shouldGoToMainScreen = false

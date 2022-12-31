@@ -33,6 +33,15 @@
 		F25887812960459000BC4A43 /* AuthenticationErrorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887802960459000BC4A43 /* AuthenticationErrorLabel.swift */; };
 		F258878629604E0E00BC4A43 /* AuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258878529604E0E00BC4A43 /* AuthenticationTests.swift */; };
 		F25887BF2960547E00BC4A43 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F25887BE2960547E00BC4A43 /* FirebaseFirestoreSwift */; };
+		F25887C52960711700BC4A43 /* BaseTasksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887C42960711700BC4A43 /* BaseTasksVC.swift */; };
+		F25887C72960711F00BC4A43 /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887C62960711F00BC4A43 /* TasksView.swift */; };
+		F25887CA296071DA00BC4A43 /* MainTasksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887C9296071DA00BC4A43 /* MainTasksModel.swift */; };
+		F25887CC296071EA00BC4A43 /* MainTasksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887CB296071EA00BC4A43 /* MainTasksVC.swift */; };
+		F25887CE296071F300BC4A43 /* MainTasksVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887CD296071F300BC4A43 /* MainTasksVM.swift */; };
+		F25887D12960720300BC4A43 /* MainTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887D02960720300BC4A43 /* MainTasksView.swift */; };
+		F25887D3296072AD00BC4A43 /* TasksVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887D2296072AD00BC4A43 /* TasksVM.swift */; };
+		F25887D62960733C00BC4A43 /* TodoTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887D52960733C00BC4A43 /* TodoTask.swift */; };
+		F25887D929607F6900BC4A43 /* MainTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887D829607F6900BC4A43 /* MainTaskTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +89,15 @@
 		F258877E29603F5800BC4A43 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		F25887802960459000BC4A43 /* AuthenticationErrorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationErrorLabel.swift; sourceTree = "<group>"; };
 		F258878529604E0E00BC4A43 /* AuthenticationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTests.swift; sourceTree = "<group>"; };
+		F25887C42960711700BC4A43 /* BaseTasksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTasksVC.swift; sourceTree = "<group>"; };
+		F25887C62960711F00BC4A43 /* TasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksView.swift; sourceTree = "<group>"; };
+		F25887C9296071DA00BC4A43 /* MainTasksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTasksModel.swift; sourceTree = "<group>"; };
+		F25887CB296071EA00BC4A43 /* MainTasksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTasksVC.swift; sourceTree = "<group>"; };
+		F25887CD296071F300BC4A43 /* MainTasksVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTasksVM.swift; sourceTree = "<group>"; };
+		F25887D02960720300BC4A43 /* MainTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTasksView.swift; sourceTree = "<group>"; };
+		F25887D2296072AD00BC4A43 /* TasksVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksVM.swift; sourceTree = "<group>"; };
+		F25887D52960733C00BC4A43 /* TodoTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTask.swift; sourceTree = "<group>"; };
+		F25887D829607F6900BC4A43 /* MainTaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTaskTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +152,7 @@
 		F258871B29600E3F00BC4A43 /* eMasaryTask */ = {
 			isa = PBXGroup;
 			children = (
+				F25887D42960732A00BC4A43 /* Library */,
 				F258871C29600E3F00BC4A43 /* AppDelegate.swift */,
 				F258871E29600E3F00BC4A43 /* SceneDelegate.swift */,
 				F258872529600E3F00BC4A43 /* eMasaryTask.xcdatamodeld */,
@@ -176,6 +195,7 @@
 		F25887502960100E00BC4A43 /* UserStories */ = {
 			isa = PBXGroup;
 			children = (
+				F25887C2296070E100BC4A43 /* Tasks */,
 				F25887652960255000BC4A43 /* BaseClasses */,
 				F258874F2960100200BC4A43 /* Authentication */,
 			);
@@ -261,6 +281,53 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F25887C2296070E100BC4A43 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				F25887C8296071C900BC4A43 /* MainTasks */,
+				F25887C3296070FD00BC4A43 /* Base */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		F25887C3296070FD00BC4A43 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F25887C42960711700BC4A43 /* BaseTasksVC.swift */,
+				F25887C62960711F00BC4A43 /* TasksView.swift */,
+				F25887D2296072AD00BC4A43 /* TasksVM.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F25887C8296071C900BC4A43 /* MainTasks */ = {
+			isa = PBXGroup;
+			children = (
+				F25887C9296071DA00BC4A43 /* MainTasksModel.swift */,
+				F25887CB296071EA00BC4A43 /* MainTasksVC.swift */,
+				F25887CD296071F300BC4A43 /* MainTasksVM.swift */,
+				F25887D02960720300BC4A43 /* MainTasksView.swift */,
+				F25887D829607F6900BC4A43 /* MainTaskTableViewCell.swift */,
+			);
+			path = MainTasks;
+			sourceTree = "<group>";
+		};
+		F25887D42960732A00BC4A43 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				F25887D72960734200BC4A43 /* Models */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		F25887D72960734200BC4A43 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F25887D52960733C00BC4A43 /* TodoTask.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,23 +472,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F25887D3296072AD00BC4A43 /* TasksVM.swift in Sources */,
 				F258875C2960188F00BC4A43 /* FirebaseManager.swift in Sources */,
 				F258872729600E3F00BC4A43 /* eMasaryTask.xcdatamodeld in Sources */,
 				F2588779296031C900BC4A43 /* SignUpModel.swift in Sources */,
 				F2588774296031A600BC4A43 /* SignInModel.swift in Sources */,
+				F25887D929607F6900BC4A43 /* MainTaskTableViewCell.swift in Sources */,
 				F25887622960244700BC4A43 /* AuthenticationView.swift in Sources */,
 				F258876E2960318E00BC4A43 /* SignInVC.swift in Sources */,
 				F25887812960459000BC4A43 /* AuthenticationErrorLabel.swift in Sources */,
 				F258876A2960308200BC4A43 /* AuthenticationTextField.swift in Sources */,
 				F258877D296031DC00BC4A43 /* SignUpVM.swift in Sources */,
 				F25887702960319500BC4A43 /* SignInVM.swift in Sources */,
+				F25887CE296071F300BC4A43 /* MainTasksVM.swift in Sources */,
 				F25887672960255B00BC4A43 /* BaseView.swift in Sources */,
+				F25887C72960711F00BC4A43 /* TasksView.swift in Sources */,
 				F258877B296031D400BC4A43 /* SignUpView.swift in Sources */,
 				F258877F29603F5800BC4A43 /* BaseVC.swift in Sources */,
 				F258871D29600E3F00BC4A43 /* AppDelegate.swift in Sources */,
 				F258871F29600E3F00BC4A43 /* SceneDelegate.swift in Sources */,
 				F2588777296031C200BC4A43 /* SignUpVC.swift in Sources */,
+				F25887D12960720300BC4A43 /* MainTasksView.swift in Sources */,
+				F25887C52960711700BC4A43 /* BaseTasksVC.swift in Sources */,
+				F25887D62960733C00BC4A43 /* TodoTask.swift in Sources */,
+				F25887CC296071EA00BC4A43 /* MainTasksVC.swift in Sources */,
 				F25887722960319F00BC4A43 /* SignInView.swift in Sources */,
+				F25887CA296071DA00BC4A43 /* MainTasksModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

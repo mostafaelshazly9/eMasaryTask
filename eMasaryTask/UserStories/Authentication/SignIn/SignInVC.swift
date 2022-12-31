@@ -23,6 +23,7 @@ class SignInVC: BaseVC {
         setupBindingsForEmptyPasswordError()
         setupBindingsForInvalidCredentialsError()
         setupBindingsForShowingUnexpectedError()
+        setupBindingsForGoingToMainScreen()
     }
 
     private func setupBindingsForEmptyUsernameError() {
@@ -69,6 +70,20 @@ class SignInVC: BaseVC {
                     self?.viewModel.isShowingUnexpectedError = false
                 }
             }.store(in: &cancellables)
+    }
+
+    private func setupBindingsForGoingToMainScreen() {
+        viewModel.$shouldGoToMainScreen
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] shouldShow in
+                if shouldShow {
+                    let viewController = MainTasksVC()
+                    viewController.modalPresentationStyle = .fullScreen
+                    self?.navigationController?.present(viewController, animated: true)
+                    self?.viewModel.shouldGoToMainScreen = false
+                }
+            }.store(in: &cancellables)
+
     }
 }
 
