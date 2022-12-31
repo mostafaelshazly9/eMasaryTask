@@ -12,12 +12,15 @@ class BaseTasksVC: BaseVC {
     var viewModel: TasksVM! /// Needs to be instantiated on loadView
     var contentView: TasksView!
 
-    override func setupBindings() {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         Task {
             try await viewModel.getTasks()
         }
+    }
 
-        viewModel.tasksPublisher
+    override func setupBindings() {
+        viewModel.$tasks
             .receive(on: DispatchQueue.main)
             .sink { [weak self] tasks in
                 self?.contentView.reloadData()

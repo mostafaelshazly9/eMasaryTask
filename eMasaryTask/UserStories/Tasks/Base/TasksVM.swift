@@ -7,11 +7,17 @@
 
 import Foundation
 
-protocol TasksVM: AnyObject {
+class TasksVM: ObservableObject {
 
-    var tasks: [TodoTask] { get }
-    var tasksPublished: Published<[TodoTask]> { get }
-    var tasksPublisher: Published<[TodoTask]>.Publisher { get }
+    let model: TasksModel!
 
-    func getTasks() async throws
+    @Published var tasks: [TodoTask] = []
+
+    init(model: TasksModel) {
+        self.model = model
+    }
+
+    func getTasks() async throws {
+        tasks = try await model.getTasks()
+    }
 }

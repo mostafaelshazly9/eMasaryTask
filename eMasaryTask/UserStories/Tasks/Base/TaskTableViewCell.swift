@@ -1,5 +1,5 @@
 //
-//  MainTaskTableViewCell.swift
+//  TaskTableViewCell.swift
 //  eMasaryTask
 //
 //  Created by Mostafa Elshazly on 31/12/2022.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class MainTaskTableViewCell: UITableViewCell {
+class TaskTableViewCell: UITableViewCell {
 
     let titleLabel = UILabel()
     let priorityView = UIView()
@@ -49,7 +49,6 @@ class MainTaskTableViewCell: UITableViewCell {
     }
 
     private func setupTitleLabel() {
-        titleLabel.backgroundColor = .white
         titleLabel.textColor = .black
 
         addSubview(titleLabel)

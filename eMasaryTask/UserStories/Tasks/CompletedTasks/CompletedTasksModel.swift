@@ -1,5 +1,5 @@
 //
-//  MainTasksModel.swift
+//  CompletedTasksModel.swift
 //  eMasaryTask
 //
 //  Created by Mostafa Elshazly on 31/12/2022.
@@ -7,14 +7,14 @@
 
 import Foundation
 
-class MainTasksModel: TasksModel {
+class CompletedTasksModel: TasksModel {
 
     func getTasks() async throws -> [TodoTask] {
         guard let userId = UserDefaults.standard.value(forKey: "userId") as? String else { return [] }
         let ref = FirebaseManager.db.collection("todos")
             .whereField("userId", isEqualTo: userId)
             .whereField("archived", isEqualTo: false)
-            .whereField("completed", isEqualTo: false)
+            .whereField("completed", isEqualTo: true)
 
         do {
             let snapshot = try await ref.getDocuments()

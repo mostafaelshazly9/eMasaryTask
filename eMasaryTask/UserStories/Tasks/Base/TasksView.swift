@@ -22,6 +22,8 @@ class TasksView: BaseView {
     }
 
     private func setupTasksTableView() {
+        tasksTableView.register(TaskTableViewCell.self, forCellReuseIdentifier: "TaskTableViewCell")
+
         addSubview(tasksTableView)
         tasksTableView.translatesAutoresizingMaskIntoConstraints = false
         tasksTableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor).isActive = true

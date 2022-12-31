@@ -1,5 +1,5 @@
 //
-//  MainTasksVC.swift
+//  CompletedTasksVC.swift
 //  eMasaryTask
 //
 //  Created by Mostafa Elshazly on 31/12/2022.
@@ -8,12 +8,12 @@
 import Foundation
 import UIKit
 
-class MainTasksVC: BaseTasksVC {
+class CompletedTasksVC: BaseTasksVC {
 
     override func loadView() {
         contentView = TasksView()
         view = contentView
-        viewModel = TasksVM(model: MainTasksModel())
+        viewModel = TasksVM(model: CompletedTasksModel())
     }
 
     override func setupBindings() {
@@ -23,7 +23,7 @@ class MainTasksVC: BaseTasksVC {
     }
 }
 
-extension MainTasksVC: UITableViewDelegate, UITableViewDataSource {
+extension CompletedTasksVC: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.tasks.count
