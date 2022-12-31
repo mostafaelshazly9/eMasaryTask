@@ -47,6 +47,10 @@
 		F25887EB2960C45900BC4A43 /* ArchivedTasksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887EA2960C45900BC4A43 /* ArchivedTasksModel.swift */; };
 		F25887ED2960C45D00BC4A43 /* ArchivedTasksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887EC2960C45D00BC4A43 /* ArchivedTasksVC.swift */; };
 		F25887F32960C60A00BC4A43 /* BaseTasksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887F22960C60A00BC4A43 /* BaseTasksModel.swift */; };
+		F25887F62960CD6200BC4A43 /* AddTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887F52960CD6200BC4A43 /* AddTaskVC.swift */; };
+		F25887F82960CEF100BC4A43 /* AddEditTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887F72960CEF100BC4A43 /* AddEditTaskView.swift */; };
+		F25887FA2960E85600BC4A43 /* AddTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887F92960E85600BC4A43 /* AddTaskModel.swift */; };
+		F25887FC2960E86300BC4A43 /* AddTaskVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887FB2960E86300BC4A43 /* AddTaskVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +112,10 @@
 		F25887EA2960C45900BC4A43 /* ArchivedTasksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchivedTasksModel.swift; sourceTree = "<group>"; };
 		F25887EC2960C45D00BC4A43 /* ArchivedTasksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchivedTasksVC.swift; sourceTree = "<group>"; };
 		F25887F22960C60A00BC4A43 /* BaseTasksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTasksModel.swift; sourceTree = "<group>"; };
+		F25887F52960CD6200BC4A43 /* AddTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskVC.swift; sourceTree = "<group>"; };
+		F25887F72960CEF100BC4A43 /* AddEditTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditTaskView.swift; sourceTree = "<group>"; };
+		F25887F92960E85600BC4A43 /* AddTaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskModel.swift; sourceTree = "<group>"; };
+		F25887FB2960E86300BC4A43 /* AddTaskVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,6 +305,7 @@
 		F25887C2296070E100BC4A43 /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
+				F25887F42960CD5000BC4A43 /* AddEditTask */,
 				F25887E12960C36D00BC4A43 /* ArchivedTasks */,
 				F25887C3296070FD00BC4A43 /* Base */,
 				F25887E02960C36500BC4A43 /* CompletedTasks */,
@@ -375,6 +384,17 @@
 				F25887EC2960C45D00BC4A43 /* ArchivedTasksVC.swift */,
 			);
 			path = ArchivedTasks;
+			sourceTree = "<group>";
+		};
+		F25887F42960CD5000BC4A43 /* AddEditTask */ = {
+			isa = PBXGroup;
+			children = (
+				F25887F72960CEF100BC4A43 /* AddEditTaskView.swift */,
+				F25887F92960E85600BC4A43 /* AddTaskModel.swift */,
+				F25887F52960CD6200BC4A43 /* AddTaskVC.swift */,
+				F25887FB2960E86300BC4A43 /* AddTaskVM.swift */,
+			);
+			path = AddEditTask;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -523,14 +543,17 @@
 				F258875C2960188F00BC4A43 /* FirebaseManager.swift in Sources */,
 				F258872729600E3F00BC4A43 /* eMasaryTask.xcdatamodeld in Sources */,
 				F2588779296031C900BC4A43 /* SignUpModel.swift in Sources */,
+				F25887F62960CD6200BC4A43 /* AddTaskVC.swift in Sources */,
 				F2588774296031A600BC4A43 /* SignInModel.swift in Sources */,
 				F25887D929607F6900BC4A43 /* TaskTableViewCell.swift in Sources */,
 				F25887E32960C3EF00BC4A43 /* CompletedTasksModel.swift in Sources */,
+				F25887F82960CEF100BC4A43 /* AddEditTaskView.swift in Sources */,
 				F25887622960244700BC4A43 /* AuthenticationView.swift in Sources */,
 				F258876E2960318E00BC4A43 /* SignInVC.swift in Sources */,
 				F25887812960459000BC4A43 /* AuthenticationErrorLabel.swift in Sources */,
 				F258876A2960308200BC4A43 /* AuthenticationTextField.swift in Sources */,
 				F25887DF2960B52100BC4A43 /* TasksTab.swift in Sources */,
+				F25887FA2960E85600BC4A43 /* AddTaskModel.swift in Sources */,
 				F25887F32960C60A00BC4A43 /* BaseTasksModel.swift in Sources */,
 				F258877D296031DC00BC4A43 /* SignUpVM.swift in Sources */,
 				F25887702960319500BC4A43 /* SignInVM.swift in Sources */,
@@ -547,6 +570,7 @@
 				F25887D62960733C00BC4A43 /* TodoTask.swift in Sources */,
 				F25887CC296071EA00BC4A43 /* MainTasksVC.swift in Sources */,
 				F25887ED2960C45D00BC4A43 /* ArchivedTasksVC.swift in Sources */,
+				F25887FC2960E86300BC4A43 /* AddTaskVM.swift in Sources */,
 				F25887722960319F00BC4A43 /* SignInView.swift in Sources */,
 				F25887DC2960AB6200BC4A43 /* QueryDocumentSnapshot+Extensions.swift in Sources */,
 				F25887CA296071DA00BC4A43 /* MainTasksModel.swift in Sources */,
