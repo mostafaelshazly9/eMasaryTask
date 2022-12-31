@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		F258871D29600E3F00BC4A43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258871C29600E3F00BC4A43 /* AppDelegate.swift */; };
 		F258871F29600E3F00BC4A43 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258871E29600E3F00BC4A43 /* SceneDelegate.swift */; };
-		F258872129600E3F00BC4A43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258872029600E3F00BC4A43 /* ViewController.swift */; };
 		F258872729600E3F00BC4A43 /* eMasaryTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F258872529600E3F00BC4A43 /* eMasaryTask.xcdatamodeld */; };
 		F258872929600E4000BC4A43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F258872829600E4000BC4A43 /* Assets.xcassets */; };
 		F258872C29600E4000BC4A43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F258872A29600E4000BC4A43 /* LaunchScreen.storyboard */; };
@@ -20,6 +19,10 @@
 		F25887562960183700BC4A43 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F25887552960183700BC4A43 /* FirebaseFirestore */; };
 		F25887582960183700BC4A43 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = F25887572960183700BC4A43 /* FirebaseFunctions */; };
 		F258875C2960188F00BC4A43 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258875B2960188F00BC4A43 /* FirebaseManager.swift */; };
+		F258875E296023D400BC4A43 /* AuthenticationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258875D296023D400BC4A43 /* AuthenticationVC.swift */; };
+		F25887602960242B00BC4A43 /* AuthenticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258875F2960242B00BC4A43 /* AuthenticationModel.swift */; };
+		F25887622960244700BC4A43 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887612960244700BC4A43 /* AuthenticationView.swift */; };
+		F25887642960245000BC4A43 /* AuthenticationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887632960245000BC4A43 /* AuthenticationVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +46,6 @@
 		F258871929600E3F00BC4A43 /* eMasaryTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eMasaryTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F258871C29600E3F00BC4A43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F258871E29600E3F00BC4A43 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F258872029600E3F00BC4A43 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F258872629600E3F00BC4A43 /* eMasaryTask.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = eMasaryTask.xcdatamodel; sourceTree = "<group>"; };
 		F258872829600E4000BC4A43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F258872B29600E4000BC4A43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +57,10 @@
 		F258874229600E4000BC4A43 /* eMasaryTaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eMasaryTaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F2588752296014D100BC4A43 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F258875B2960188F00BC4A43 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		F258875D296023D400BC4A43 /* AuthenticationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationVC.swift; sourceTree = "<group>"; };
+		F258875F2960242B00BC4A43 /* AuthenticationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
+		F25887612960244700BC4A43 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		F25887632960245000BC4A43 /* AuthenticationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +115,6 @@
 			children = (
 				F258871C29600E3F00BC4A43 /* AppDelegate.swift */,
 				F258871E29600E3F00BC4A43 /* SceneDelegate.swift */,
-				F258872029600E3F00BC4A43 /* ViewController.swift */,
 				F258872529600E3F00BC4A43 /* eMasaryTask.xcdatamodeld */,
 				F258872A29600E4000BC4A43 /* LaunchScreen.storyboard */,
 				F25887512960138900BC4A43 /* Resources */,
@@ -139,6 +144,10 @@
 		F258874F2960100200BC4A43 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				F258875D296023D400BC4A43 /* AuthenticationVC.swift */,
+				F258875F2960242B00BC4A43 /* AuthenticationModel.swift */,
+				F25887612960244700BC4A43 /* AuthenticationView.swift */,
+				F25887632960245000BC4A43 /* AuthenticationVM.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -316,8 +325,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F258875C2960188F00BC4A43 /* FirebaseManager.swift in Sources */,
-				F258872129600E3F00BC4A43 /* ViewController.swift in Sources */,
+				F258875E296023D400BC4A43 /* AuthenticationVC.swift in Sources */,
 				F258872729600E3F00BC4A43 /* eMasaryTask.xcdatamodeld in Sources */,
+				F25887622960244700BC4A43 /* AuthenticationView.swift in Sources */,
+				F25887642960245000BC4A43 /* AuthenticationVM.swift in Sources */,
+				F25887602960242B00BC4A43 /* AuthenticationModel.swift in Sources */,
 				F258871D29600E3F00BC4A43 /* AppDelegate.swift in Sources */,
 				F258871F29600E3F00BC4A43 /* SceneDelegate.swift in Sources */,
 			);
