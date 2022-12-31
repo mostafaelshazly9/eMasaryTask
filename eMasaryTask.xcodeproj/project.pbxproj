@@ -23,6 +23,7 @@
 		F25887602960242B00BC4A43 /* AuthenticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258875F2960242B00BC4A43 /* AuthenticationModel.swift */; };
 		F25887622960244700BC4A43 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887612960244700BC4A43 /* AuthenticationView.swift */; };
 		F25887642960245000BC4A43 /* AuthenticationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887632960245000BC4A43 /* AuthenticationVM.swift */; };
+		F25887672960255B00BC4A43 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887662960255B00BC4A43 /* BaseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		F258875F2960242B00BC4A43 /* AuthenticationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
 		F25887612960244700BC4A43 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		F25887632960245000BC4A43 /* AuthenticationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationVM.swift; sourceTree = "<group>"; };
+		F25887662960255B00BC4A43 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,8 +146,8 @@
 		F258874F2960100200BC4A43 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				F258875D296023D400BC4A43 /* AuthenticationVC.swift */,
 				F258875F2960242B00BC4A43 /* AuthenticationModel.swift */,
+				F258875D296023D400BC4A43 /* AuthenticationVC.swift */,
 				F25887612960244700BC4A43 /* AuthenticationView.swift */,
 				F25887632960245000BC4A43 /* AuthenticationVM.swift */,
 			);
@@ -155,6 +157,7 @@
 		F25887502960100E00BC4A43 /* UserStories */ = {
 			isa = PBXGroup;
 			children = (
+				F25887652960255000BC4A43 /* BaseClasses */,
 				F258874F2960100200BC4A43 /* Authentication */,
 			);
 			path = UserStories;
@@ -184,6 +187,14 @@
 				F258875B2960188F00BC4A43 /* FirebaseManager.swift */,
 			);
 			path = Firebase;
+			sourceTree = "<group>";
+		};
+		F25887652960255000BC4A43 /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				F25887662960255B00BC4A43 /* BaseView.swift */,
+			);
+			path = BaseClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +341,7 @@
 				F25887622960244700BC4A43 /* AuthenticationView.swift in Sources */,
 				F25887642960245000BC4A43 /* AuthenticationVM.swift in Sources */,
 				F25887602960242B00BC4A43 /* AuthenticationModel.swift in Sources */,
+				F25887672960255B00BC4A43 /* BaseView.swift in Sources */,
 				F258871D29600E3F00BC4A43 /* AppDelegate.swift in Sources */,
 				F258871F29600E3F00BC4A43 /* SceneDelegate.swift in Sources */,
 			);
