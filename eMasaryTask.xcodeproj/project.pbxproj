@@ -24,6 +24,7 @@
 		F25887622960244700BC4A43 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887612960244700BC4A43 /* AuthenticationView.swift */; };
 		F25887642960245000BC4A43 /* AuthenticationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887632960245000BC4A43 /* AuthenticationVM.swift */; };
 		F25887672960255B00BC4A43 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887662960255B00BC4A43 /* BaseView.swift */; };
+		F258876A2960308200BC4A43 /* AuthenticationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887692960308200BC4A43 /* AuthenticationTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		F25887612960244700BC4A43 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		F25887632960245000BC4A43 /* AuthenticationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationVM.swift; sourceTree = "<group>"; };
 		F25887662960255B00BC4A43 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		F25887692960308200BC4A43 /* AuthenticationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				F25887512960138900BC4A43 /* Resources */,
 				F25887592960184C00BC4A43 /* Services */,
 				F25887502960100E00BC4A43 /* UserStories */,
+				F25887682960306E00BC4A43 /* Views */,
 			);
 			path = eMasaryTask;
 			sourceTree = "<group>";
@@ -195,6 +198,14 @@
 				F25887662960255B00BC4A43 /* BaseView.swift */,
 			);
 			path = BaseClasses;
+			sourceTree = "<group>";
+		};
+		F25887682960306E00BC4A43 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F25887692960308200BC4A43 /* AuthenticationTextField.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,6 +351,7 @@
 				F258872729600E3F00BC4A43 /* eMasaryTask.xcdatamodeld in Sources */,
 				F25887622960244700BC4A43 /* AuthenticationView.swift in Sources */,
 				F25887642960245000BC4A43 /* AuthenticationVM.swift in Sources */,
+				F258876A2960308200BC4A43 /* AuthenticationTextField.swift in Sources */,
 				F25887602960242B00BC4A43 /* AuthenticationModel.swift in Sources */,
 				F25887672960255B00BC4A43 /* BaseView.swift in Sources */,
 				F258871D29600E3F00BC4A43 /* AppDelegate.swift in Sources */,
