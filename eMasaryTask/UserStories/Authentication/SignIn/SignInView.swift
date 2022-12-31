@@ -10,8 +10,6 @@ import UIKit
 
 class SignInView: AuthenticationView {
 
-    private let usernameTextFieldPlaceHolder = "Username"
-    private let passwordTextFieldPlaceHolder = "Password"
     private let mainButtonText = "  Sign in  "
     private let switchButtonText = "New user? Sign up"
 
@@ -21,8 +19,6 @@ class SignInView: AuthenticationView {
     }
 
     private func customizeView() {
-        usernameTextField.placeholder = usernameTextFieldPlaceHolder
-        passwordTextField.placeholder = passwordTextFieldPlaceHolder
         mainButton.setTitle(mainButtonText, for: .normal)
         switchButton.setTitle(switchButtonText, for: .normal)
     }

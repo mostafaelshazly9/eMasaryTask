@@ -8,12 +8,23 @@
 import Foundation
 import UIKit
 
+protocol AuthenticationViewDelegate: AnyObject {
+
+    func didTapMainButton()
+    func didTapSwitchButton()
+}
+
 class AuthenticationView: BaseView {
 
     let usernameTextField = AuthenticationTextField()
     let passwordTextField = AuthenticationTextField()
     let mainButton = UIButton()
     let switchButton = UIButton()
+
+    weak var delegate: AuthenticationViewDelegate?
+
+    private let usernameTextFieldPlaceHolder = "Username"
+    private let passwordTextFieldPlaceHolder = "Password"
 
     override func setupView() {
         super.setupView()
@@ -24,6 +35,8 @@ class AuthenticationView: BaseView {
     }
 
     private func setupUsernameTextField() {
+        usernameTextField.placeholder = usernameTextFieldPlaceHolder
+
         addSubview(usernameTextField)
         usernameTextField.translatesAutoresizingMaskIntoConstraints = false
         usernameTextField.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
@@ -33,6 +46,7 @@ class AuthenticationView: BaseView {
     }
 
     private func setupPasswordTextField() {
+        passwordTextField.placeholder = passwordTextFieldPlaceHolder
         passwordTextField.isSecureTextEntry = true
 
         addSubview(passwordTextField)
@@ -47,6 +61,8 @@ class AuthenticationView: BaseView {
         mainButton.backgroundColor = .tintColor
         mainButton.layer.cornerRadius = 8
 
+        mainButton.addTarget(self, action: #selector(didTapMainButton), for: .touchUpInside)
+
         addSubview(mainButton)
         mainButton.translatesAutoresizingMaskIntoConstraints = false
         mainButton.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
@@ -56,9 +72,19 @@ class AuthenticationView: BaseView {
     private func setupSwitchButton() {
         switchButton.setTitleColor(.tintColor, for: .normal)
 
+        switchButton.addTarget(self, action: #selector(didTapSwitchButton), for: .touchUpInside)
+
         addSubview(switchButton)
         switchButton.translatesAutoresizingMaskIntoConstraints = false
         switchButton.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         switchButton.topAnchor.constraint(equalTo: mainButton.bottomAnchor, constant: 20).isActive = true
+    }
+
+    @objc private func didTapMainButton() {
+        delegate?.didTapMainButton()
+    }
+
+    @objc private func didTapSwitchButton() {
+        delegate?.didTapSwitchButton()
     }
 }
