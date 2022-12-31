@@ -31,7 +31,7 @@
 		F258877D296031DC00BC4A43 /* SignUpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258877C296031DC00BC4A43 /* SignUpVM.swift */; };
 		F258877F29603F5800BC4A43 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258877E29603F5800BC4A43 /* BaseVC.swift */; };
 		F25887812960459000BC4A43 /* AuthenticationErrorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25887802960459000BC4A43 /* AuthenticationErrorLabel.swift */; };
-		F258878629604E0E00BC4A43 /* SignInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258878529604E0E00BC4A43 /* SignInTests.swift */; };
+		F258878629604E0E00BC4A43 /* AuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258878529604E0E00BC4A43 /* AuthenticationTests.swift */; };
 		F25887BF2960547E00BC4A43 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F25887BE2960547E00BC4A43 /* FirebaseFirestoreSwift */; };
 /* End PBXBuildFile section */
 
@@ -79,7 +79,7 @@
 		F258877C296031DC00BC4A43 /* SignUpVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVM.swift; sourceTree = "<group>"; };
 		F258877E29603F5800BC4A43 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		F25887802960459000BC4A43 /* AuthenticationErrorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationErrorLabel.swift; sourceTree = "<group>"; };
-		F258878529604E0E00BC4A43 /* SignInTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInTests.swift; sourceTree = "<group>"; };
+		F258878529604E0E00BC4A43 /* AuthenticationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +149,7 @@
 		F258873529600E4000BC4A43 /* eMasaryTaskTests */ = {
 			isa = PBXGroup;
 			children = (
-				F258878529604E0E00BC4A43 /* SignInTests.swift */,
+				F258878529604E0E00BC4A43 /* AuthenticationTests.swift */,
 			);
 			path = eMasaryTaskTests;
 			sourceTree = "<group>";
@@ -429,7 +429,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F258878629604E0E00BC4A43 /* SignInTests.swift in Sources */,
+				F258878629604E0E00BC4A43 /* AuthenticationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

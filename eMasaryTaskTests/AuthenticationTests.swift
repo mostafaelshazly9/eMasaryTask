@@ -1,5 +1,5 @@
 //
-//  SignInTests.swift
+//  AuthenticationTests.swift
 //  eMasaryTaskTests
 //
 //  Created by Mostafa Elshazly on 31/12/2022.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import eMasaryTask
 
-final class SignInTests: XCTestCase {
+final class AuthenticationTests: XCTestCase {
 
     func testErrorIsShownWithEmptyUsername() {
         // given

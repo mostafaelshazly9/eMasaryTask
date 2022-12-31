@@ -17,7 +17,6 @@ class SignInVC: BaseVC {
         view = contentView
     }
 
-
     override func setupBindings() {
         contentView.delegate = self
         setupBindingsForEmptyUsernameError()
