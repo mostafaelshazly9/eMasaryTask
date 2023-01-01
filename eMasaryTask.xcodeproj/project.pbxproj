@@ -55,6 +55,8 @@
 		F258880229610C4600BC4A43 /* EdittaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258880129610C4600BC4A43 /* EdittaskModel.swift */; };
 		F258880429610CFE00BC4A43 /* EditTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258880329610CFE00BC4A43 /* EditTaskVC.swift */; };
 		F258880629610E5C00BC4A43 /* EditTaskVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F258880529610E5C00BC4A43 /* EditTaskVM.swift */; };
+		F2761676296138A400D5D698 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2761675296138A400D5D698 /* Reachability.swift */; };
+		F27616792961396800D5D698 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27616782961396800D5D698 /* CoreDataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +126,8 @@
 		F258880129610C4600BC4A43 /* EdittaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdittaskModel.swift; sourceTree = "<group>"; };
 		F258880329610CFE00BC4A43 /* EditTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskVC.swift; sourceTree = "<group>"; };
 		F258880529610E5C00BC4A43 /* EditTaskVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskVM.swift; sourceTree = "<group>"; };
+		F2761675296138A400D5D698 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		F27616782961396800D5D698 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +246,8 @@
 		F25887592960184C00BC4A43 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				F27616772961395800D5D698 /* CoreData */,
+				F27616742961388E00D5D698 /* Repository */,
 				F258875A2960187F00BC4A43 /* Firebase */,
 			);
 			path = Services;
@@ -425,6 +431,22 @@
 			path = EditTask;
 			sourceTree = "<group>";
 		};
+		F27616742961388E00D5D698 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				F2761675296138A400D5D698 /* Reachability.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		F27616772961395800D5D698 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				F27616782961396800D5D698 /* CoreDataService.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -584,6 +606,7 @@
 				F25887DF2960B52100BC4A43 /* TasksTab.swift in Sources */,
 				F25887FA2960E85600BC4A43 /* AddTaskModel.swift in Sources */,
 				F25887F32960C60A00BC4A43 /* BaseTasksModel.swift in Sources */,
+				F2761676296138A400D5D698 /* Reachability.swift in Sources */,
 				F258877D296031DC00BC4A43 /* SignUpVM.swift in Sources */,
 				F25887702960319500BC4A43 /* SignInVM.swift in Sources */,
 				F258880629610E5C00BC4A43 /* EditTaskVM.swift in Sources */,
@@ -594,6 +617,7 @@
 				F258877B296031D400BC4A43 /* SignUpView.swift in Sources */,
 				F258877F29603F5800BC4A43 /* BaseVC.swift in Sources */,
 				F258880429610CFE00BC4A43 /* EditTaskVC.swift in Sources */,
+				F27616792961396800D5D698 /* CoreDataService.swift in Sources */,
 				F258871D29600E3F00BC4A43 /* AppDelegate.swift in Sources */,
 				F258871F29600E3F00BC4A43 /* SceneDelegate.swift in Sources */,
 				F2588777296031C200BC4A43 /* SignUpVC.swift in Sources */,
