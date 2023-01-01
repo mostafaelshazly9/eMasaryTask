@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class AddEditTaskView: BaseView {
+class AddTaskView: BaseView {
 
     let scrollView = UIScrollView()
     let titleLabel = UILabel()
@@ -23,6 +23,8 @@ class AddEditTaskView: BaseView {
     let archivedSwitch = UISwitch()
     let completedLabel = UILabel()
     let completedSwitch = UISwitch()
+
+    var completedSwitchBottomConstraint: NSLayoutConstraint!
 
     override func setupView() {
         super.setupView()
@@ -93,6 +95,7 @@ class AddEditTaskView: BaseView {
         descriptionTextView.layer.cornerRadius = 8
         descriptionTextView.layer.borderWidth = 1
         descriptionTextView.textContainerInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        descriptionTextView.textColor = .black
 
         scrollView.addSubview(descriptionTextView)
         descriptionTextView.translatesAutoresizingMaskIntoConstraints = false
@@ -137,7 +140,6 @@ class AddEditTaskView: BaseView {
         scrollView.addSubview(dueDatePicker)
         dueDatePicker.translatesAutoresizingMaskIntoConstraints = false
         dueDatePicker.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor).isActive = true
-//        dueDatePicker.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
         dueDatePicker.topAnchor.constraint(equalTo: dueDateLabel.bottomAnchor, constant: 16).isActive = true
         dueDatePicker.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
@@ -175,8 +177,9 @@ class AddEditTaskView: BaseView {
         scrollView.addSubview(completedSwitch)
         completedSwitch.translatesAutoresizingMaskIntoConstraints = false
         completedSwitch.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16).isActive = true
-        completedSwitch.centerYAnchor.constraint(equalTo: completedLabel.centerYAnchor, constant: 16).isActive = true
-        completedSwitch.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
+        completedSwitch.centerYAnchor.constraint(equalTo: completedLabel.centerYAnchor).isActive = true
+        completedSwitchBottomConstraint = completedSwitch.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
+        completedSwitchBottomConstraint.isActive = true
     }
 
 }

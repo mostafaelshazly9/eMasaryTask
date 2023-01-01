@@ -22,18 +22,3 @@ class MainTasksVC: BaseTasksVC {
         contentView.tasksTableView.dataSource = self
     }
 }
-
-extension MainTasksVC: UITableViewDelegate, UITableViewDataSource {
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.tasks.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: "TaskTableViewCell",
-            for: indexPath) as? TaskTableViewCell else { return UITableViewCell() }
-        cell.configure(for: viewModel.tasks[indexPath.row])
-        return cell
-    }
-}

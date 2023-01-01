@@ -42,3 +42,24 @@ class BaseTasksVC: BaseVC {
         present(viewController, animated: true)
     }
 }
+
+extension BaseTasksVC: UITableViewDelegate, UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.tasks.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: "TaskTableViewCell",
+            for: indexPath) as? TaskTableViewCell else { return UITableViewCell() }
+        cell.configure(for: viewModel.tasks[indexPath.row])
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let viewController = EditTaskVC()
+        viewController.setTodo(viewModel.tasks[indexPath.row])
+        navigationController?.present(UINavigationController(rootViewController: viewController), animated: true)
+    }
+}
