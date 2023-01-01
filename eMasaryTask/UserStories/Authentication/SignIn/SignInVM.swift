@@ -15,7 +15,7 @@ class SignInVM: ObservableObject {
     @Published var isShowingPasswordEmptyError = false
     @Published var isShowingInvalidCredentialsError = false
     @Published var isShowingUnexpectedError = false
-
+    @Published var shouldGoToMainScreen = false
 
     /// Validates that username and password are not empty
     func trySigningInWith(username: String?, password: String?) {
@@ -45,6 +45,7 @@ class SignInVM: ObservableObject {
                 }
 
                 UserDefaults.standard.set(userId, forKey: "userId")
+                shouldGoToMainScreen = true
             } catch {
                 isShowingUnexpectedError = true
             }

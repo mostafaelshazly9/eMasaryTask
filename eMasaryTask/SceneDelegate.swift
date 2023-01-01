@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = UINavigationController(rootViewController: SignInVC())
+        window.rootViewController = UserDefaults.standard.value(forKey: "userId") == nil ? UINavigationController(rootViewController: SignInVC()) : TasksTab()
         self.window = window
         window.makeKeyAndVisible()
     }
