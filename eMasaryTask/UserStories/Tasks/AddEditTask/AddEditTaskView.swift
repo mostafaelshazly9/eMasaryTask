@@ -58,6 +58,7 @@ class AddEditTaskView: BaseView {
         titleLabel.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16).isActive = true
         titleLabel.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16).isActive = true
         titleLabel.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 16).isActive = true
+        titleLabel.widthAnchor.constraint(equalTo: scrollView.widthAnchor, constant: -32).isActive = true
         titleLabel.heightAnchor.constraint(equalToConstant: 34).isActive = true
     }
 
@@ -136,6 +137,7 @@ class AddEditTaskView: BaseView {
         scrollView.addSubview(dueDatePicker)
         dueDatePicker.translatesAutoresizingMaskIntoConstraints = false
         dueDatePicker.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor).isActive = true
+//        dueDatePicker.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
         dueDatePicker.topAnchor.constraint(equalTo: dueDateLabel.bottomAnchor, constant: 16).isActive = true
         dueDatePicker.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }

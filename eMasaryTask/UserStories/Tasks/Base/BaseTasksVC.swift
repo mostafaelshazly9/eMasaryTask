@@ -38,7 +38,7 @@ class BaseTasksVC: BaseVC {
     }
 
     @objc private func didTapAddBarButtonItem() {
-        let viewController = AddTaskVC()
+        let viewController = UINavigationController(rootViewController: AddTaskVC())
         present(viewController, animated: true)
     }
 }

@@ -11,6 +11,7 @@ import UIKit
 class AddTaskVC: BaseVC {
 
     let contentView = AddEditTaskView()
+    let viewModel = AddTaskVM()
     let pickerViewDS = ["low", "normal", "high", "critical"]
 
     override func loadView() {
@@ -24,17 +25,26 @@ class AddTaskVC: BaseVC {
     }
 
     override func setupBindings() {
+        viewModel.delegate = self
         contentView.priorityPickerView.dataSource = self
         contentView.priorityPickerView.delegate = self
     }
 
     private func setupNavBar() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(didTapAddBarButtonItem))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(didTapAddBarButtonItem))
     }
 
     @objc private func didTapAddBarButtonItem() {
-        let viewController = AddTaskVC()
-        present(viewController, animated: true)
+        let task = TodoTask(documentId: "",
+                            title: contentView.titleTextField.text,
+                            description: contentView.descriptionTextView.text,
+                            priority: pickerViewDS[contentView.priorityPickerView.selectedRow(inComponent: 0)],
+                            userId: "",
+                            dueDate: String(contentView.dueDatePicker.date.timeIntervalSince1970),
+                            archived: contentView.archivedSwitch.isOn,
+                            completed: contentView.completedSwitch.isOn,
+                            lastModification: String(Date().timeIntervalSince1970))
+        viewModel.addTask(task)
     }
 }
 
@@ -49,5 +59,18 @@ extension AddTaskVC: UIPickerViewDelegate, UIPickerViewDataSource {
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         pickerViewDS[row]
+    }
+}
+
+extension AddTaskVC: AddTaskVMDelegate {
+
+    func showEmptyTitleError() {
+        showError(message: "Title cannot be empty")
+    }
+
+    func dismissScreen() {
+        DispatchQueue.main.async { [weak self] in
+            self?.navigationController?.dismiss(animated: true)
+        }
     }
 }
